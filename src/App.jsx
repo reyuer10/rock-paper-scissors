@@ -2,20 +2,25 @@ import { useState } from "react";
 import Container from "./components/Container";
 import StartGame from "./components/StartGame";
 
-export default function App() {
-  const [isGameStart, setIsGameStart] = useState(false);
+import { Routes, Route, useNavigate } from "react-router-dom";
+import GameOver from "./components/GameOver";
 
+export default function App() {
+  const navigate = useNavigate();
   const handleStartGame = () => {
-    setIsGameStart(!isGameStart);
+    navigate("/startgame");
   };
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div className="h-screen flex flex-col justify-center items-center bg-slate-700">
       <div className="w-[900px] text-center">
-        {!isGameStart ? (
-          <Container handleStartGame={handleStartGame} />
-        ) : (
-          <StartGame />
-        )}
+        <Routes>
+          <Route
+            path="/"
+            element={<Container handleStartGame={handleStartGame} />}
+          />
+          <Route path="/startgame" element={<StartGame />} />
+          <Route path="/gameover" element={<GameOver />} />
+        </Routes>
       </div>
     </div>
   );
