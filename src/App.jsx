@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
+// Pages
 import Container from "./components/Container";
 import StartGame from "./components/StartGame";
-
-import { Routes, Route, useNavigate } from "react-router-dom";
-import GameOver from "./components/GameOver";
+import ModalWinner from "./components/ModalWinner";
+import ModalSettings from "./components/ModalSettings";
+import Tutorial from "./components/Tutorial";
 
 export default function App() {
   const navigate = useNavigate();
@@ -19,7 +21,9 @@ export default function App() {
             element={<Container handleStartGame={handleStartGame} />}
           />
           <Route path="/startgame" element={<StartGame />} />
-          <Route path="/gameover" element={<GameOver />} />
+          <Route path="/tutorial" element={<Tutorial />} />
+          <Route path="/modalwinner" element={<ModalWinner />} />
+          <Route path="/modalsettings" element={<ModalSettings />} />
         </Routes>
       </div>
     </div>
