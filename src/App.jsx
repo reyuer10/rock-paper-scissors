@@ -5,7 +5,7 @@ import Container from "./components/Container";
 import StartGame from "./components/StartGame";
 import ModalWinner from "./components/ModalWinner";
 import ModalSettings from "./components/ModalSettings";
-import Tutorial from "./components/Tutorial";
+import Tutorial from "./pages/Tutorial";
 
 export default function App() {
   const navigate = useNavigate();
