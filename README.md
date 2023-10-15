@@ -1,5 +1,6 @@
 # Rock, Paper & Scissors - React Js
-![GameInterface](https://github.com/reyuer10/rock-paper-scissors/assets/78475164/ff04daea-cb19-4c1e-acc9-6e470a569e31)
+![MainMenu](https://github.com/reyuer10/rock-paper-scissors/assets/78475164/be340db3-5880-4bd1-ad6f-1c540b4597a8)
+
 
 
 
